@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class tp1to2 : MonoBehaviour
 {
     public GameObject spook;
+    public AudioSource scare;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (SceneManager.GetActiveScene().name == "1level")
@@ -23,6 +24,7 @@ public class tp1to2 : MonoBehaviour
         {
             print("boo");
             spook.SetActive(true);
+            scare.Play();
             Invoke("GetToMenu",2f);
             
 
